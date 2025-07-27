@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Banking-grade design system with professional blue/gray palette
+All colors MUST be HSL for consistency
+*/
+
+@layer base {
+  :root {
+    /* Banking theme - professional blues and grays */
+    --background: 210 30% 98%;
+    --foreground: 213 31% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 213 31% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 31% 12%;
+
+    /* Banking primary - trustworthy blue */
+    --primary: 214 84% 56%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 214 84% 52%;
+
+    /* Secondary - subtle banking gray */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 213 31% 12%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 213 19% 46%;
+
+    --accent: 210 20% 96%;
+    --accent-foreground: 213 31% 12%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 20% 89%;
+    --input: 214 20% 89%;
+    --ring: 214 84% 56%;
+
+    --radius: 0.5rem;
+
+    /* Banking-specific colors */
+    --banking-green: 142 76% 36%;
+    --banking-green-foreground: 0 0% 100%;
+    --banking-orange: 25 95% 53%;
+    --banking-orange-foreground: 0 0% 100%;
+    --banking-blue-light: 214 84% 92%;
+    
+    /* Chat specific colors */
+    --chat-user-bg: 214 84% 56%;
+    --chat-user-text: 0 0% 100%;
+    --chat-bot-bg: 210 20% 96%;
+    --chat-bot-text: 213 31% 12%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(214 84% 56%), hsl(214 84% 48%));
+    --gradient-surface: linear-gradient(180deg, hsl(210 30% 98%), hsl(210 30% 96%));
+    
+    /* Shadows */
+    --shadow-banking: 0 4px 20px -4px hsl(214 84% 56% / 0.1);
+    --shadow-message: 0 2px 8px -2px hsl(213 31% 12% / 0.08);
+    
+    /* Animations */
+    --transition-banking: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark banking theme */
+    --background: 213 31% 8%;
+    --foreground: 210 30% 98%;
+
+    --card: 213 31% 10%;
+    --card-foreground: 210 30% 98%;
+
+    --popover: 213 31% 10%;
+    --popover-foreground: 210 30% 98%;
+
+    --primary: 214 84% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 214 84% 64%;
+
+    --secondary: 213 31% 15%;
+    --secondary-foreground: 210 30% 98%;
+
+    --muted: 213 31% 15%;
+    --muted-foreground: 213 19% 65%;
+
+    --accent: 213 31% 15%;
+    --accent-foreground: 210 30% 98%;
+
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 213 31% 20%;
+    --input: 213 31% 20%;
+    --ring: 214 84% 60%;
+
+    /* Dark mode banking colors */
+    --banking-green: 142 76% 45%;
+    --banking-orange: 25 95% 60%;
+    --banking-blue-light: 214 84% 15%;
+    
+    /* Dark chat colors */
+    --chat-user-bg: 214 84% 60%;
+    --chat-user-text: 0 0% 100%;
+    --chat-bot-bg: 213 31% 15%;
+    --chat-bot-text: 210 30% 98%;
+    
+    /* Dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(214 84% 60%), hsl(214 84% 52%));
+    --gradient-surface: linear-gradient(180deg, hsl(213 31% 8%), hsl(213 31% 10%));
+    
+    /* Dark shadows */
+    --shadow-banking: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --shadow-message: 0 2px 8px -2px hsl(0 0% 0% / 0.2);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
